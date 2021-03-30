@@ -50,18 +50,18 @@ def compare_images(imageA, imageB, title):
     plt.savefig(f'{title}.png')
 
 
-imgA = cv2.imread("../test_images/1.jpeg")
+imgA = cv2.imread("../test_images/black.png")
 imgA = cv2.cvtColor(imgA, cv2.COLOR_BGR2RGB)
-imgB = cv2.imread("../test_images/1.jpeg")
+imgB = cv2.imread("../test_images/white.png")
 imgB = cv2.cvtColor(imgB, cv2.COLOR_BGR2RGB)
 
-imgC = cv2.imread("../test_images/5.jpeg")
-imgC = cv2.cvtColor(imgC, cv2.COLOR_BGR2RGB)
+# imgC = cv2.imread("../test_images/5.jpeg")
+# imgC = cv2.cvtColor(imgC, cv2.COLOR_BGR2RGB)
 # cv2.imshow("Preview",imgA)
 # cv2.waitKey(1000)
-compare_images(imgA, imgA, 'Original')
-for i in range (2,6):
-    print(i)
-    imgB = cv2.imread(f"../test_images/{i}.jpeg")
-    imgB = cv2.cvtColor(imgB, cv2.COLOR_BGR2RGB)
-    compare_images(imgA, imgB, f'{i}')
+compare_images(imgA, imgB, 'black_white')
+# for i in range (2,6):
+#     print(i)
+#     imgB = cv2.imread(f"../test_images/{i}.jpeg")
+#     imgB = cv2.cvtColor(imgB, cv2.COLOR_BGR2RGB)
+#     compare_images(imgA, imgB, f'{i}')

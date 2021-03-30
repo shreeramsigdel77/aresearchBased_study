@@ -108,18 +108,6 @@ plt.show()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 decoded_imgs = autoencoder.predict(x_test)
 
 # train_loss = tf.keras.losses.mae(decoded_imgs,x_test_temp)
