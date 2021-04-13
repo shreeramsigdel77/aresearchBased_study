@@ -16,6 +16,10 @@ from keras.callbacks import TensorBoard
 #tensorboard --logdir=/tmp/autoencoder
 
 (x_train, _), (x_test, _) = mnist.load_data()
+print(x_train)
+print(len(x_train))
+print(type(x_train[0]))
+exit()
 
 x_train = x_train.astype('float32') / 255.
 x_test = x_test.astype('float32') / 255.
@@ -65,7 +69,6 @@ autoencoder.fit(x_train_noisy, x_train,
                 shuffle=True,
                 validation_data=(x_test_noisy, x_test),
                 callbacks=[TensorBoard(log_dir='/tmp/tb', histogram_freq=0, write_graph=False)])
-
 
 
 
